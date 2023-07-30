@@ -1,6 +1,6 @@
 /* variables */
 :root{
-    --color:#b54707;
+    --color:#7d4a2d;
 }
 /* basic style */
 *,
@@ -28,10 +28,10 @@ button{
 .parent{
     position: relative;
     min-height: 100vh;
-    background-color: #b54707;
+    background-color: #ffaa79;
 }
 .row{
-    max-width: 70rem;
+    max-width: 55rem;
     background-color: white;
     position: absolute;
     top: 50%;
@@ -40,7 +40,9 @@ button{
     border-radius: 1rem;
     overflow: hidden;
     width: 100%;
+    
     box-shadow: .8rem .8rem 3rem rgb(49, 47, 47);
+   
 }
 .row::after{
     content: "";
@@ -59,27 +61,30 @@ button{
 }
  
 
-.left-section{
+.left_section{
     max-width: 25rem;
-    min-height: 45rem;
+    min-height: 51rem;
     /* background-color: blue;   */
     max-height: 30rem;
     margin: 0 auto;
     text-align: center;
-    padding-top: 5rem;
+    padding-top: 6rem;
 }
 
  
 .circle{
-   max-width: 15rem;
-   max-height: 15rem;
+   width: 15rem;
+   height: 15rem;
    margin: 0 auto;
-   margin-bottom: 1rem;
+   position: relative;
+   border-radius: 50%;
+   margin-bottom: 4rem;
+   
 
 }
 .img{
     width: 100%;
-    max-height: 15rem;
+    min-height: 15rem;
     object-fit:cover;
     border-radius: 50%;
     
@@ -91,11 +96,11 @@ button{
     color:var(--color);
 }
 .text{
-  font-size: 2.2rem;
-  margin-bottom: 6rem;
+  font-size: 1.8rem;
+  margin-bottom: 7rem;
   text-transform: capitalize;
   font-weight: 400;
-  color: rgb(56, 52, 52);
+  color: #a18484;
 }
 .btn{
    text-transform: capitalize;
@@ -110,6 +115,7 @@ button{
    cursor: pointer;
    min-width: 20rem;
    transition: all .4s;
+   font-weight: 700;
 
 }
 .btn:hover{
@@ -121,45 +127,64 @@ button{
     margin-bottom: 2rem;
 }
 /* right section */
-.div_same{
-    background-color: rgb(245, 226, 229);
-    min-height: 15rem;
-    position: relative;
-    
+.right{
+    padding: 6.5rem;
+    background-color: #fbe9ec;
 }
-.div_same:not(:last-child){
-    margin-bottom: .5rem;
-}
-.first_child{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    
+.right:not(:last-child){
+    margin-bottom: .3rem;
 }
 span{
     display: block;
 }
+.text_container{
+    text-align: center;
+}
 .number{
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 600;
-    color: #a8511e;
+    color: rgb(133 43 43);
 }
 .text_span{
-    font-size: 2rem;
-    font-weight: 500;
-    color: #b54707;
+    font-size: 2.5rem;
+    font-weight: 300;
+    text-transform: capitalize;
+    color: rgb(133 43 43);
 }
-.text_2{
-    padding-left: 1.5rem;
+.left_circle{
+    position: absolute;
+    top: -.5rem;
+    left: -.5rem;
+    right: -.5rem;
+    bottom: -.5rem;
+    border: 1px solid var(--color);
+    border-radius: 50%;
+    border-left-color: transparent;
+    transition: all .4s;
 }
-.number3{
-    padding-left: 1.5rem;
+.right_circle{
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+    right: -1rem;
+    bottom: -1rem;
+    border: 1px solid var(--color);
+    border-radius: 50%;
+    border-right-color: transparent;
+    transition: all .4s;
+}
+.row:hover .right_circle{
+    transform: rotate(180deg);
+}
+.row:hover .left_circle{
+    transform: rotate(180deg);
 }
 
-@media (max-width:500px){
+
+
+ @media (max-width:500px){
     .parent{
-        min-height: 120vh;
+        min-height: 150vh;
     }
     .col-5-of-8{
         width: 100%;
@@ -170,4 +195,4 @@ span{
         width: 100%;
         float: none;
     }
-}
+} 
